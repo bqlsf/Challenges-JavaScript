@@ -86,5 +86,18 @@ copie.push({ id: 106, nom: "Gomme", categorie: "Papeterie",
     function garder(sup){
         return sup.categorie == "Papeterie";
     }
-    console.log(garde);
+    // console.log(garde);
+
+    // 05. Préparer les étiquettes
+
+    const noms = produits.map(desnom)
+    function desnom(produits){
+        return produits.nom;
+    }
+    // console.log(noms);
+    const etiquette = produits.map(desetiquette)
+    function desetiquette(produits){
+        return `<< ${produits.nom} - ${produits.prix} DH >>`
+    }
+    console.log(etiquette);
     
