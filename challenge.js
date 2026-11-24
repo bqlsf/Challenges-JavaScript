@@ -21,5 +21,7 @@ prix: 30, stock: 4 }
 console.log(categories[0]);
 console.log(categories.length);
 
-categories.push("Classement")
-console.log(categories)
+categories.push("Classement");
+categories[1] = "Bureau";
+categories.pop();
+console.log(categories);
