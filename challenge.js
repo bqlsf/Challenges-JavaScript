@@ -17,6 +17,7 @@ prix: 120, stock: 2 },
 prix: 30, stock: 4 }
 ];
 
+// 01. Organiser les catégories
 
 console.log(categories[0]);
 console.log(categories.length);
@@ -25,3 +26,15 @@ categories.push("Classement");
 categories[1] = "Bureau";
 categories.pop();
 console.log(categories);
+
+// 02. Mettre la boutique à jour
+
+console.log(boutique.nom);
+console.log(boutique.ville);
+
+boutique.devise = "MAD";
+boutique.ouverte = "false"
+if(boutique.ouverte == "false"){
+    boutique.statut = "Fermée";
+}
+console.log(boutique);
