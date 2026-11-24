@@ -48,8 +48,8 @@ for(let i=0; i<produits.length; i++){
 // console.log(copie);
 
 for(let i=0; i<copie.length; i++){
-    console.log(copie[i].nom);
-    console.log(copie[i].stock);
+    // console.log(copie[i].nom);
+    // console.log(copie[i].stock);
 }
 
 for(let i=0; i<copie.length; i++){
@@ -70,4 +70,21 @@ copie.push({ id: 106, nom: "Gomme", categorie: "Papeterie",
         }
     }
     
-    console.log(copie);
+    // console.log(copie);
+
+    // 04. Sélectionner les produits en rayon
+    const sup = produits.filter(superieure);
+
+    function superieure(produits){
+        return produits.stock > 0;
+    }
+  
+    // console.log(sup);
+
+    const garde = sup.filter(garder)
+
+    function garder(sup){
+        return sup.categorie == "Papeterie";
+    }
+    console.log(garde);
+    
