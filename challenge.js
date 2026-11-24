@@ -19,22 +19,55 @@ prix: 30, stock: 4 }
 
 // 01. Organiser les catégories
 
-console.log(categories[0]);
-console.log(categories.length);
+// console.log(categories[0]);
+// console.log(categories.length);
 
-categories.push("Classement");
-categories[1] = "Bureau";
-categories.pop();
-console.log(categories);
+// categories.push("Classement");
+// categories[1] = "Bureau";
+// categories.pop();
+// console.log(categories);
 
-// 02. Mettre la boutique à jour
+// // 02. Mettre la boutique à jour
 
-console.log(boutique.nom);
-console.log(boutique.ville);
+// console.log(boutique.nom);
+// console.log(boutique.ville);
 
-boutique.devise = "MAD";
-boutique.ouverte = "false"
-if(boutique.ouverte == "false"){
-    boutique.statut = "Fermée";
+// boutique.devise = "MAD";
+// boutique.ouverte = "false"
+// if(boutique.ouverte == "false"){
+//     boutique.statut = "Fermée";
+// }
+// console.log(boutique);
+
+// 03. Mettre à jour un inventaire
+
+const copie =[]
+for(let i=0; i<produits.length; i++){
+    copie.push({...produits[i]})
 }
-console.log(boutique);
+// console.log(copie);
+
+for(let i=0; i<copie.length; i++){
+    console.log(copie[i].nom);
+    console.log(copie[i].stock);
+}
+
+for(let i=0; i<copie.length; i++){
+    if(copie[i].nom === "Stylo"){
+    
+        copie[i].stock = 6;
+    }
+}
+
+copie.push({ id: 106, nom: "Gomme", categorie: "Papeterie",
+    prix: 5, stock: 8},);
+
+
+    for(let i=0; i<copie.length; i++){
+        if(copie[i].id == 104){
+
+            copie.splice(i,1);
+        }
+    }
+    
+    console.log(copie);
