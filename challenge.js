@@ -153,4 +153,15 @@ const index199 = produits.findIndex((produit)=>{
 const some = produits.some((produit)=>{
     return produit.stock == 0
 })
-console.log(some);
+// console.log(some);
+
+// 09. Contrôler l’inventaire
+
+const positifprix = produits.every((produit)=>{
+    return produit.prix > 0
+})
+console.log(positifprix);
+const positifstock = produits.every((produit)=>{
+    return produit.stock > 0
+})
+console.log(positifstock);
