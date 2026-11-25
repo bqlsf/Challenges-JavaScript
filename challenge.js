@@ -160,8 +160,27 @@ const some = produits.some((produit)=>{
 const positifprix = produits.every((produit)=>{
     return produit.prix > 0
 })
-console.log(positifprix);
+// console.log(positifprix);
 const positifstock = produits.every((produit)=>{
     return produit.stock > 0
 })
-console.log(positifstock);
+// console.log(positifstock);
+
+// 10. Produire un bilan de la papeterie 
+
+const papeterieenstock = produits.filter((produit)=>{
+    return produit.categorie == "Papeterie" && produit.stock > 0
+})
+
+console.log(papeterieenstock);
+
+const papeterieNom = papeterieenstock.map((produit)=>{
+    return produit.nom
+})
+
+console.log(papeterieNom);
+
+const papeterietotalprix = papeterieenstock.reduce((total,produit)=>{
+    return total+  produit.prix * produit.stock
+},0)
+console.log(papeterietotalprix);
