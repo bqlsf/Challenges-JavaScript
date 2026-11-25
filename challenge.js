@@ -115,13 +115,35 @@ function desetiquette(produits) {
 
 // 06. Calculer les totaux du stock
 
-const totalstock = produits.reduce(calculstock,0)
-function calculstock(total, produit){
+const totalstock = produits.reduce(calculstock, 0)
+function calculstock(total, produit) {
     return total + produit.stock;
 }
 // console.log(totalstock);
-const totalprix = produits.reduce(calculprix,0)
-function calculprix(total, produit){
+const totalprix = produits.reduce(calculprix, 0)
+function calculprix(total, produit) {
     return total + produit.prix * produit.stock
 }
-console.log(totalprix);
+// console.log(totalprix);
+
+// 07. Retrouver un produit
+
+const recuper = produits.find((produit) => {
+    return produit.id == 103
+});
+// console.log(recuper);
+
+const essay = produits.find((produit) => {
+    return produit.id == 199
+});
+// console.log(essay);
+
+const indextrouss = produits.findIndex((produit)=>{
+    return produit.id == 103
+})
+// console.log(indextrouss);
+
+const index199 = produits.findIndex((produit)=>{
+    return produit.id == 199
+})
+// console.log(index199);
