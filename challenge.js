@@ -147,3 +147,10 @@ const index199 = produits.findIndex((produit)=>{
     return produit.id == 199
 })
 // console.log(index199);
+
+// 08. Détecter une rupture
+
+const some = produits.some((produit)=>{
+    return produit.stock == 0
+})
+console.log(some);
